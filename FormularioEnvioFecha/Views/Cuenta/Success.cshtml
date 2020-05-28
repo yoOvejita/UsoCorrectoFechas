@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Success</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Nombre de usuario:</td>
+            <td>@ViewBag.cuenta.NombreUsuario</td>
+        </tr>
+        <tr>
+            <td>Nombre completo:</td>
+            <td>@ViewBag.cuenta.NombreCompleto</td>
+        </tr>
+        <tr>
+            <td>Fecha de nacimiento:</td>
+            <td>@ViewBag.cuenta.FechaNacimiento.ToString("dd-MM-yyyy")</td>
+        </tr>
+    </table>
+</body>
+</html>

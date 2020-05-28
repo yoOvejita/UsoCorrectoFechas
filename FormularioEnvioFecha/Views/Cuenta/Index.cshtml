@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+@model FormularioEnvioFecha.Models.Cuenta
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h3>Formulario a llenar</h3>
+    @using (Html.BeginForm("Registrar", "Cuenta", FormMethod.Post)) {
+        <table>
+            <tr>
+                <td>Nombre de usuario:</td>
+                <td>@Html.TextBoxFor(x => x.NombreUsuario)</td>
+            </tr>
+            <tr>
+                <td>Nombre completo:</td>
+                <td>@Html.TextBoxFor(y => y.NombreCompleto)</td>
+            </tr>
+            <tr>
+                <td>Fecha de nacimiento:</td>
+                <td>@Html.EditorFor(mod => mod.FechaNacimiento)</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" value="Registrar"/></td>
+            </tr>
+        </table>
+    }
+</body>
+</html>
